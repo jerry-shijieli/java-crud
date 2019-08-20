@@ -13,7 +13,7 @@ public class Insert {
 
             session.execute(
                 SimpleStatement.builder( "INSERT INTO killrvideo.advocates (first_name, last_name, region, city, super_power) VALUES (?,?,?,?,?)")
-                        .addPositionalValues("Cristina", "Veale", "North Carolina", "Charlotte", "master developer")
+                        .addPositionalValues("Cristina", "Veale", "North Carolina", "Charlotte", "time travel")
                         .build());
         }
     }

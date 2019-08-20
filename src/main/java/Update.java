@@ -13,7 +13,7 @@ public class Update {
 
             session.execute(
                 SimpleStatement.builder( "UPDATE killrvideo.advocates SET super_power = ? WHERE region = ? AND city = ? AND last_name = ? AND first_name = ?")
-                        .addPositionalValues("amazing master developer", "North Carolina", "Charlotte", "Veale", "Cristina")
+                        .addPositionalValues("wormhole time travel", "North Carolina", "Charlotte", "Veale", "Cristina")
                         .build());
         }
     }

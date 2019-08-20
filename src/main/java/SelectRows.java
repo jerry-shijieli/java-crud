@@ -9,6 +9,7 @@ public class SelectRows {
                 .addContactPoint(new InetSocketAddress(IpAddress.get(), 9042))
                 .withLocalDatacenter("DC1")
                 .build()) {
+
             ResultSet results = session.execute(
                 SimpleStatement.builder( "SELECT * FROM killrvideo.advocates WHERE region = ? AND city = ? AND last_name = ? AND first_name = ?")
                         .addPositionalValues("North Carolina", "Charlotte", "Veale", "Cristina")
