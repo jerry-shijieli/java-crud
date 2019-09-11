@@ -8,12 +8,12 @@ public class Update {
 
         try (DseSession session = DseSession.builder()
                 .addContactPoint(new InetSocketAddress(IpAddress.get(), 9042))
-                .withLocalDatacenter("DC1")
+                .withLocalDatacenter("dc1")
                 .build()) {
 
             session.execute(
-                SimpleStatement.builder( "UPDATE killrvideo.advocates SET super_power = ? WHERE region = ? AND city = ? AND last_name = ? AND first_name = ?")
-                        .addPositionalValues("wormhole time travel", "North Carolina", "Charlotte", "Veale", "Cristina")
+                SimpleStatement.builder( "UPDATE killrvideo.user_credentials SET password = ? WHERE email = ?")
+                        .addPositionalValues("Cr1st1n@sN3wP@ssW0rd", "cv@datastax.com")
                         .build());
         }
     }

@@ -1,8 +1,7 @@
-CREATE TABLE killrvideo.advocates (
-  first_name    TEXT,
-  last_name     TEXT,
-  region        TEXT,
-  city          TEXT,
-  super_power   TEXT,
-  PRIMARY KEY ((region, city), last_name, first_name)
+// User credentials, keyed by email address so we can authenticate
+CREATE TABLE IF NOT EXISTS user_credentials (
+    email     text,
+    password  text,
+    userid    uuid,
+    PRIMARY KEY (email)
 );

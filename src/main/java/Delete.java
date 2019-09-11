@@ -8,12 +8,12 @@ public class Delete {
 
         try (DseSession session = DseSession.builder()
                 .addContactPoint(new InetSocketAddress(IpAddress.get(), 9042))
-                .withLocalDatacenter("DC1")
+                .withLocalDatacenter("dc1")
                 .build()) {
 
             session.execute(
-                SimpleStatement.builder( "DELETE FROM killrvideo.advocates WHERE region = ? AND city = ? AND last_name = ? AND first_name = ?")
-                        .addPositionalValues("North Carolina", "Charlotte", "Veale", "Cristina")
+                SimpleStatement.builder( "DELETE FROM killrvideo.user_credentials WHERE email = ?")
+                        .addPositionalValues("cv@datastax.com")
                         .build());
         }
     }
