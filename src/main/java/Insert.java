@@ -7,10 +7,10 @@ public class Insert {
     
     public static void main(String[] args) {
 
-        try (DseSession session = DseSession.builder()
-                .addContactPoint(new InetSocketAddress(IpAddress.get(), 9042))
-                .withLocalDatacenter("dc1")
-                .build()) {
+       try (DseSession session = DseSession.builder().withCloudSecureConnectBundle("/home/ubuntu/workspace/creds.zip")
+           .withAuthCredentials("KVUser","KVPassword")
+           .withKeyspace("killrvideo")
+           .build()) {
 
             session.execute(
                 SimpleStatement.builder( "INSERT INTO killrvideo.user_credentials (email, password, userid) VALUES (?,?,?)")
