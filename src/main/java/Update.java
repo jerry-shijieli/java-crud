@@ -1,6 +1,5 @@
 import com.datastax.dse.driver.api.core.DseSession;
 import com.datastax.oss.driver.api.core.cql.*;
-import java.net.InetSocketAddress;
 
 public class Update {
     
