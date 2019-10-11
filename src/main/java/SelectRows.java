@@ -5,9 +5,8 @@ import java.net.InetSocketAddress;
 public class SelectRows {
     
     public static void main(String args[]) {
-       try (DseSession session = DseSession.builder().withCloudSecureConnectBundle("/home/ubuntu/workspace/creds.zip")
-           .withAuthCredentials("KVUser","KVPassword")
-           .withKeyspace("killrvideo")
+       try (DseSession session = DseSession.builder().withCloudSecureConnectBundle(DBConnection.getConnectionPath())
+           .withAuthCredentials(DBConnection.getUsername(), DBConnection.getPassword())
            .build()) {
 
             ResultSet results = session.execute(
