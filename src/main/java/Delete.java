@@ -17,7 +17,6 @@ public class Delete {
         }
         catch(Throwable t) {
             System.out.println("Failed Delete");
-p
         }
     }
 }
