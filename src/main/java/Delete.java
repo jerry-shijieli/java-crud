@@ -13,6 +13,11 @@ public class Delete {
                 SimpleStatement.builder( "DELETE FROM killrvideo.user_credentials WHERE email = ?")
                         .addPositionalValues("cv@datastax.com")
                         .build());
+            System.out.println("Successful Delete");
+        }
+        catch(Throwable t) {
+            System.out.println("Failed Delete");
+p
         }
     }
 }

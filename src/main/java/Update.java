@@ -13,6 +13,11 @@ public class Update {
                 SimpleStatement.builder( "UPDATE killrvideo.user_credentials SET password = ? WHERE email = ?")
                         .addPositionalValues("Cr1st1n@sN3wP@ssW0rd", "cv@datastax.com")
                         .build());
+            System.out.println("Update Succeeded");
+        }
+        catch(Throwable t) {
+            System.out.println("Failed Update");
+            t.printStackTrace();
         }
     }
 }

@@ -14,11 +14,19 @@ public class SelectRows {
                         .build());
             Row row = results.one();
             System.out.println("***************************************************************************************");
-            System.out.format("%s %s %s\n",
-                row.getString("email"),
-                row.getString("password"),
-                row.getUuid("userid"));
+            if (row == null) {
+                System.out.println("No row selected");
+            } else {
+                System.out.format("%s %s %s\n",
+                    row.getString("email"),
+                    row.getString("password"),
+                    row.getUuid("userid"));
+           }
             System.out.println("***************************************************************************************");
         }
-    }
+         catch(Throwable t) {
+            System.out.println("Failed Select");
+            t.printStackTrace(); 
+        }
+   }
 }
