@@ -6,8 +6,8 @@ public class Update {
     public static void main(String[] args) {
 
        try (DseSession session = DseSession.builder().withCloudSecureConnectBundle(DBConnection.getConnectionPath())
-           .withAuthCredentials(DBConnection.getUsername(), DBConnection.getPassword())
-           .build()) {
+            .withAuthCredentials(DBConnection.getUsername(), DBConnection.getPassword())
+            .build()) {
 
             session.execute(
                 SimpleStatement.builder( "UPDATE killrvideo.user_credentials SET password = ? WHERE email = ?")

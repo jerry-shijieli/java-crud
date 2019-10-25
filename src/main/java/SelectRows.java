@@ -21,7 +21,7 @@ public class SelectRows {
                     row.getString("email"),
                     row.getString("password"),
                     row.getUuid("userid"));
-           }
+            }
             System.out.println("***************************************************************************************");
         }
          catch(Throwable t) {
