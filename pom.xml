@@ -10,23 +10,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>datastax-releases-public-local</id>
-            <url>https://repo.datastax.com/datastax-public-releases-local/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
     <dependencies>
         <dependency>
             <groupId>com.datastax.dse</groupId>
             <artifactId>dse-java-driver-core</artifactId>
-            <version>2.2.0-cloud-01</version>
+            <version>2.3.0</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
